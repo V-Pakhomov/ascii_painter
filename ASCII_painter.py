@@ -31,7 +31,7 @@ def image_to_txt(image):
 		image = Image.open(image)
 	except FileNotFoundError as err:
 		print(err)
-		exit(1)
+		return None
 	draw = ImageDraw.Draw(image)
 	width, height = image.size
 	pix = image.load()
